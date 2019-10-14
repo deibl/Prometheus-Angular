@@ -1,0 +1,26 @@
+Timer and Summary metrics can be split into predefined buckets.<br/>
+Each Bucket counts, how many of the metric measurements do fit in the bucket (meaning they have the same, or a
+bigger value).<br />
+If you are not sure which buckets you will need, you can choose the option to publishPercentileHistogram (on metrics
+creation) than you will get predefined buckets.
+<h2>Metric creation</h2>
+Metric created in @PostConstruct, via:
+<img src="assets/images/bucket/1.png" width="100%"/>
+<br/>
+<h2>Usage</h2>
+<form (ngSubmit)="onSubmit()" class="form-inline">
+  <div class="form-group mr-2">
+    Amount
+  </div>
+  <div class="form-group mr-2">
+    <input type="text" [(ngModel)]="amount" class="form-control mb-2" id="amount" name="amount">
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>
+<br/>
+<br/>
+Done via
+<br/>
+<img src="assets/images/bucket/2.png"/>
+<h2>Grafana Dashboard</h2>
+<a href="http://localhost:3000/d/dKjC7goZk/" target="_blank">Dashboard</a>

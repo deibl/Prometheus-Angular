@@ -1,0 +1,16 @@
+Histograms provide a way to categorize metric measurements. When creating the metric, the expected range is defined
+via minimumExpectedValue and maximumExpectedValue. If not provide, micrometer will use default values. Micrometer
+now defines buckets in this range. If there a specific interesting points, they can be defined via sla. Useful for
+tracking (as the name suggests) tracking SLAs.
+<img src="assets/images/histogram/1.png" width="100%"/>
+<br/>
+<h2>Usage</h2>+
+This mainly does make sense when having lot of measurements, thus, the following does 100 random measurements in the
+previously defined range.<br/>
+<a [routerLink]="" (click)="randomMeasurement()">Execute random measurement</a>
+<br/><br/>
+Done via
+<br/>
+<img src="assets/images/histogram/2.png" width="100%"/>
+<h2>Grafana Dashboard</h2>
+<a href="http://localhost:3000/d/OtCj7RTZk/" target="_blank">Dashboard</a>

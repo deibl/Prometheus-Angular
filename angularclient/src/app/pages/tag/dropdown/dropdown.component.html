@@ -1,0 +1,10 @@
+<select [(ngModel)]="_selectedEntity">
+  <option *ngFor="let entity of entities" [value]="entity.value">
+    {{entity.viewValue}}
+  </option>
+</select>
+<select [(ngModel)]="_selectedOperation">
+  <option *ngFor="let operation of operations" [value]="operation.value">
+    {{operation.viewValue}}
+  </option>
+</select>

@@ -1,0 +1,23 @@
+The long task timer is used when observing a long running task WHILE it is running. <br/>
+Unlike the other metric timers you can see the progress, while the timer is running and not when the timer has
+stopped.
+This mostly makes sense for long running operations like batch jobs.<br/>
+It can be very useful for alerting purposes as you know how long it takes before the process has finished,
+<h2>Metric creation</h2>
+Metric created in @PostConstruct, via:
+<img src="assets/images/longtimer/1.png" width="100%" />
+<br/><br/>
+<h2>Usage</h2>
+Watch prometheus endpoint while timer is running.<br />
+<a [routerLink]="" (click)="startTimer()">Start timer</a><br />
+<a [routerLink]="" (click)="stopTimer()">Stop timer</a><br />
+Done via
+<br/>
+<img src="assets/images/longtimer/2.png"/>
+<br/><br/>
+<img src="assets/images/longtimer/3.png"/>
+<br/><br/>
+Besides of this way, it can also be used as part of the timer annotation (see timer annotation example
+) via "@Timed(longTask = true)"
+<h2>Grafana Dashboard</h2>
+<a href="http://localhost:3000/d/fHPb5-gWk/" target="_blank">Dashboard</a>

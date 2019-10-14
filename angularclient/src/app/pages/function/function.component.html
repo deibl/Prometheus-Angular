@@ -1,0 +1,15 @@
+Function counter work close to the way gauge do. They monitor a given object. The value to be monitored is defined
+via a function when creating the metric. The difference to the gauge is that the value may only stay the same or go
+up.
+<h2>Metric creation</h2>
+Metric created in @PostConstruct, via:
+<img src="assets/images/function/1.png" width="100%" />
+<br/><br/>
+<h2>Usage</h2>
+<a [routerLink]="" (click)="onSubmit()">Click to add element to watched list</a>
+<br/><br/>
+Done via
+<img src="assets/images/function/2.png" width="100%" />
+<br/><br/>
+<h2>Function timer</h2>
+There is a FunctionTimer as well, working the same way as the described function counter.

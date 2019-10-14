@@ -1,0 +1,33 @@
+Counter is the simplest metric. As its name suggested it is used for counting things.<br/>
+Use case could be counting calls to a specific REST endpoints.<br/>
+There are methods for either increasing by one or by a custom amount (for example useful when measuring things,
+processed in batches).
+<h2>Metric creation</h2>
+Metric created in @PostConstruct, via:
+<img src="assets/images/counter/1.png" width="100%" />
+<br/><br/>
+<h2>Usage, increment by one</h2>
+<a [routerLink]="" (click)="onSingleSubmit()">Click to increment</a>
+<br/>
+<br/>
+Done via
+<br/>
+<img src="assets/images/counter/2.png"/>
+<br/><br/>
+
+<h2>Usage, increment multiple</h2>
+<form (ngSubmit)="onMultiSubmit()" class="form-inline">
+  <div class="form-group mr-2">
+    Amount
+  </div>
+  <div class="form-group mr-2">
+    <input type="text" [(ngModel)]="amount" class="form-control mb-2" id="amount" name="amount">
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>
+<br/>
+Done via
+<br/>
+<img src="assets/images/counter/3.png"/>
+<h2>Grafana Dashboard</h2>
+<a href="http://localhost:3000/d/R_DcIaRWk" target="_blank">Dashboard</a>

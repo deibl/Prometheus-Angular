@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.1.8.RELEASE'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group 'com.promangular'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+def springBootVersion = '2.0.5.RELEASE'
+def micrometerVersion = '1.1.4'
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: springBootVersion
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop', version: springBootVersion
+
+    //Dependencies used for metrics
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: springBootVersion
+    compile group: 'io.micrometer', name: 'micrometer-core', version: micrometerVersion
+    compile group: 'io.micrometer', name: 'micrometer-registry-prometheus', version: micrometerVersion
+
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springBootVersion
+}
+
+bootJar {
+    mainClassName = 'com.promangular.Application'
+}

@@ -1,0 +1,10 @@
+This is a small demo application, build with the intention to showcase the different kind of metrics measurements
+provided by micrometer.<br/>
+As receiver of the metrics, Prometheus is used, storing them in a time-series-database and providing them to
+Grafana for visualization. <br/>
+This application is build on base of spring-boot, using spring-boot-actuator and micrometer. The metrics are
+provided
+to prometheus using micrometer-prometheus-registry. On the right side there is the (filtered) prometheus endpoint to see
+the effect of the metrics described. <br/>
+Each subpage does filter the metrics for the currently described ones as well.<br/>
+If you want to see all metrics, visit <a href="http://localhost:8080/actuator/prometheus" target="_blank">http://localhost:8080/actuator/prometheus</a>

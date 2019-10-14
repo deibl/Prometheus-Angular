@@ -1,0 +1,31 @@
+Gauge (pronounced [geidʒ]) is used for monitoring changing objects.<br/>
+Use case could be observing a cache (its size).<br/>
+Metrics are not collected all the time but only when the corresponding endpoint gets called.
+<h2>Metric creation</h2>
+Metric created in @PostConstruct, via:
+<img src="assets/images/gauge/1.png" width="100%"/>
+<br/>
+<h2>Metric manipulation</h2>
+<form (ngSubmit)="onSubmit()" class="form-inline">
+  <div class="form-group mr-2">
+    Amount
+  </div>
+  <div class="form-group mr-2">
+    <input type="text" [(ngModel)]="amount" class="form-control mb-2" id="amount" name="amount">
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>
+Current list size: {{ amount }}
+<br/>
+<br/>
+Done via
+<br/>
+<img src="assets/images/gauge/2.png" width="100%"/>
+<h2>TimeGauge</h2>
+In addition to the "regular" gauge, measuring in numbers, there is also a special kind of gauge used when the
+monitored value is time.<br/>
+One use case would be monitoring the drift between two consumers on the same stream. <br/>
+Its usage is the same as for the regular gauge but you pass a timeunit and the time function to the builder instead
+of the measurement function.
+<h2>Grafana Dashboard</h2>
+<a href="http://localhost:3000/d/R2tcHagWk" target="_blank">Dashboard</a>

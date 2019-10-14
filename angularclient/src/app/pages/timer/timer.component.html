@@ -1,0 +1,32 @@
+For measuring time there are multiple methods provided by micrometer.<br/>
+All of the work by submitting the time as soon as the process being monitored has finished. In case of monitoring
+something, taking really long (like a batch job), consider using the long task timer
+<h2>Metric creation</h2>
+Metric created in @PostConstruct, via:
+<img src="assets/images/timer/1.png" width="100%" />
+<h2>Timer using timeunit</h2>
+<a [routerLink]="" (click)="measureTimeTimeUnit()">measure time timeunit</a><br/>
+<br/>
+Done via
+<br/>
+<img src="assets/images/timer/2.png"/>
+<h2>Timer using duration</h2>
+<a [routerLink]="" (click)="measureTimeDuration()">measure time duration</a><br/>
+<br/>
+Done via
+<br/>
+<img src="assets/images/timer/3.png"/>
+<h2>Timer using Runnable</h2>
+<a [routerLink]="" (click)="measureTimeRunnable()">measure time runnable</a><br/>
+<br/>
+Done via
+<br/>
+<img src="assets/images/timer/4.png" width="100%" />
+<h2>Timer using timeunit</h2>
+<a [routerLink]="" (click)="measureTimeSupplier()">measure time timeunit</a><br/>
+<br/>
+Done via
+<br/>
+<img src="assets/images/timer/5.png"/>
+<h2>Grafana Dashboard</h2>
+<a href="http://localhost:3000/d/evahd-RZk/" target="_blank">Dashboard</a>

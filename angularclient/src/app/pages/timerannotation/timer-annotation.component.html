@@ -1,0 +1,15 @@
+A nice alternative way for measuring execution time is using the @Timed annotation. For it to be enabled you need
+an AOP provide (like in this case spring-boot-aop) to be present and configured.<br/>
+<img src="assets/images/annotation/1.png" width="100%" />
+This will result in the execution time being measured and taged with method- and class-name as tags.
+<h2>Metric creation</h2>
+Metric created in @PostConstruct, via:
+<img src="assets/images/annotation/2.png"/>
+<h2>Usage</h2>
+<a [routerLink]="" (click)="measureTimeAnnotation()">measure time annotation</a>
+<br/>
+Done via
+<br/>
+<img src="assets/images/annotation/3.png"/>
+<h2>Grafana Dashboard</h2>
+<a href="http://localhost:3000/d/e3awd-RZk/" target="_blank">Dashboard</a>
